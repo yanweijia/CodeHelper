@@ -22,14 +22,14 @@
         </dependency>
 
     </dependencies>
-    
+
     <build>
         <resources>
             <resource>
                 <filtering>false</filtering>
                 <directory>src/main/java</directory>
                 <includes>
-                    <include>**/*.fxml</include>
+                    <include>**/*.controller</include>
                 </includes>
             </resource>
         </resources>

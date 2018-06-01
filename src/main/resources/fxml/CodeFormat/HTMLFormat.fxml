@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane fx:controller="controller.CodeFormat.HTMLFormatController" layoutX="10.0" layoutY="10.0"
+            xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+    <center>
+        <SplitPane dividerPositions="0.5" BorderPane.alignment="CENTER">
+            <items>
+                <BorderPane prefHeight="200.0" prefWidth="200.0">
+                    <top>
+                        <Label text="origin html" BorderPane.alignment="CENTER"/>
+                    </top>
+                    <center>
+                        <TextArea fx:id="txtOriginHtml" prefHeight="200.0" prefWidth="200.0"
+                                  BorderPane.alignment="CENTER"/>
+                    </center>
+                </BorderPane>
+                <BorderPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
+                    <top>
+                        <Label text="formated html" BorderPane.alignment="CENTER"/>
+                    </top>
+                    <center>
+                        <TextArea fx:id="txtFormatedHtml" prefHeight="200.0" prefWidth="200.0"
+                                  BorderPane.alignment="CENTER"/>
+                    </center>
+                </BorderPane>
+            </items>
+        </SplitPane>
+    </center>
+    <bottom>
+        <GridPane BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <children>
+                <Button alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#formatHTML" text="Format"
+                        GridPane.columnIndex="1"/>
+            </children>
+        </GridPane>
+    </bottom>
+</BorderPane>
+

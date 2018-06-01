@@ -1,10 +1,7 @@
-package ui;
-
+import controller.MainUIController;
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
+import util.FXHelper;
 
 import javax.swing.*;
 
@@ -16,11 +13,7 @@ public class CodeHelperApplication extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/fxml/MainUI.fxml"));
-        primaryStage.setScene(new Scene(root));
-        primaryStage.setResizable(true);
-        primaryStage.setTitle("Title");
-        primaryStage.show();
+        FXHelper.newStage(getClass(), MainUIController.fxmlFile, MainUIController.title);
     }
 
     public static void main(String[] args) {
@@ -37,7 +30,6 @@ public class CodeHelperApplication extends Application {
             jFrame.add(jPanel);
             jFrame.setLocationRelativeTo(null);
             jFrame.setVisible(true);
-
         }
     }
 

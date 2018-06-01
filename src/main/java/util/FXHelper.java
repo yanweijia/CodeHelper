@@ -36,11 +36,11 @@ public class FXHelper {
     }
 
 
-    private static void showErrorDialog(String message) {
+    public static void showErrorDialog(String message) {
         showDialog("Error", "Error", message, Alert.AlertType.ERROR);
     }
 
-    private static void showInfoDialog(String message) {
+    public static void showInfoDialog(String message) {
         showDialog("Info", "Info", message, Alert.AlertType.INFORMATION);
     }
 
