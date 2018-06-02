@@ -11,6 +11,8 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by FXBL on 6/20/2017.
@@ -31,8 +33,21 @@ public class FXHelper {
         } catch (IOException e) {
             System.out.println("switch ui failed");
         }
-        containerPane.getChildren().clear();
-        containerPane.getChildren().addAll(pane);
+        //读取 containerPane 中是否已经加载过该fxml资源文件
+        Map<String, Object> map;
+        if (containerPane.getUserData() == null) {
+            map = new HashMap<>();
+        } else {
+            map = (Map<String, Object>) containerPane.getUserData();
+        }
+        containerPane.getChildren().forEach(node -> node.setVisible(false));
+        if (map.get(fxmlFile) != null) {
+            ((Node) map.get(fxmlFile)).setVisible(true);
+        } else {
+            map.put(fxmlFile, pane);
+            containerPane.getChildren().addAll(pane);
+        }
+        containerPane.setUserData(map);
     }
 
 

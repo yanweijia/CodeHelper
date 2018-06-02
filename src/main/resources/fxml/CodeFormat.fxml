@@ -15,6 +15,7 @@
                         <Button mnemonicParsing="false" onAction="#HTMLFormatFunction" text="HTMLFormat"/>
                         <Button mnemonicParsing="false" onAction="#JSONFormatFunction" text="JSONFormat"/>
                         <Button mnemonicParsing="false" onAction="#XMLFormatFunction" text="XMLFormat"/>
+                        <Button mnemonicParsing="false" onAction="#SQLFormatFunction" text="SQLFormat"/>
                     </children>
                 </VBox>
             </content>

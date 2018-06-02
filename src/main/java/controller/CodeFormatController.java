@@ -2,6 +2,7 @@ package controller;
 
 import controller.CodeFormat.HTMLFormatController;
 import controller.CodeFormat.JSONFormatController;
+import controller.CodeFormat.SQLFormatController;
 import controller.CodeFormat.XMLFormatController;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -34,6 +35,12 @@ public class CodeFormatController implements Initializable {
     @FXML
     private void XMLFormatFunction() {
         FXHelper.loadWindow(getClass(), XMLFormatController.fxmlFile, container);
+    }
+
+    @FXML
+    private void SQLFormatFunction() {
+        FXHelper.loadWindow(getClass(), SQLFormatController.fxmlFile, container);
+
     }
 
 

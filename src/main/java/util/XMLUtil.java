@@ -15,6 +15,12 @@ import java.io.StringWriter;
 import java.io.Writer;
 
 public class XMLUtil {
+    /**
+     * 格式化 XML 字串
+     *
+     * @param unformattedXml 待格式化 xml 文档
+     * @return
+     */
     public static String format(String unformattedXml) {
         try {
             final Document document = parseXmlFile(unformattedXml);
