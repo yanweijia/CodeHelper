@@ -3,25 +3,25 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <BorderPane layoutX="10.0" layoutY="10.0" prefHeight="387.0" prefWidth="639.0" xmlns="http://javafx.com/javafx/8.0.121"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CodeFormat.HTMLFormatController">
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CodeFormat.JSONFormatController">
     <center>
         <SplitPane dividerPositions="0.5" BorderPane.alignment="CENTER">
             <items>
                 <BorderPane prefHeight="200.0" prefWidth="200.0">
                     <top>
-                        <Label text="origin html" BorderPane.alignment="CENTER"/>
+                        <Label text="origin JSON" BorderPane.alignment="CENTER"/>
                     </top>
                     <center>
-                        <TextArea fx:id="txtOriginHtml" prefHeight="200.0" prefWidth="200.0"
+                        <TextArea fx:id="txtOriginJSON" prefHeight="200.0" prefWidth="200.0"
                                   BorderPane.alignment="CENTER"/>
                     </center>
                 </BorderPane>
                 <BorderPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
                     <top>
-                        <Label text="formated html" BorderPane.alignment="CENTER"/>
+                        <Label text="formated JSON" BorderPane.alignment="CENTER"/>
                     </top>
                     <center>
-                        <TextArea fx:id="txtFormatedHtml" prefHeight="200.0" prefWidth="200.0"
+                        <TextArea fx:id="txtFormatedJSON" prefHeight="200.0" prefWidth="200.0"
                                   BorderPane.alignment="CENTER"/>
                     </center>
                 </BorderPane>
@@ -38,7 +38,7 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
             </rowConstraints>
             <children>
-                <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#formatHTML"
+                <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#formatJSON"
                         text="Format" textAlignment="CENTER" GridPane.columnIndex="1"/>
             </children>
         </GridPane>

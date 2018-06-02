@@ -2,7 +2,7 @@ package controller.CodeFormat;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
-import util.HtmlFormatUtil;
+import util.HtmlUtil;
 
 public class HTMLFormatController {
     public static final String fxmlFile = "/fxml/CodeFormat/HTMLFormat.fxml";
@@ -13,6 +13,6 @@ public class HTMLFormatController {
 
     @FXML
     private void formatHTML() {
-        txtFormatedHtml.setText(HtmlFormatUtil.formatHtml(txtOriginHtml.getText()));
+        txtFormatedHtml.setText(HtmlUtil.formatHtml(txtOriginHtml.getText()));
     }
 }

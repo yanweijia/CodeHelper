@@ -4,7 +4,7 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Entities;
 
-public class HtmlFormatUtil {
+public class HtmlUtil {
 
 
     /**
