@@ -3,7 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <BorderPane layoutX="10.0" layoutY="10.0" prefHeight="387.0" prefWidth="639.0" xmlns="http://javafx.com/javafx/8.0.121"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CodeFormat.XMLFormatController">
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.codeformat.XMLFormatController">
     <center>
         <SplitPane dividerPositions="0.5" BorderPane.alignment="CENTER">
             <items>

@@ -23,4 +23,17 @@ public class HtmlUtil {
         return doc.toString();
     }
 
+
+    /**
+     * format text as HTML5 style
+     *
+     * @param html origin text
+     * @return
+     */
+    public static String formatHtml5(String html) {
+        Document doc = Jsoup.parse(html);
+        doc.outputSettings().prettyPrint(true);
+        return doc.toString();
+    }
+
 }
