@@ -5,10 +5,12 @@
 <VBox prefHeight="339.0" prefWidth="557.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1"
       fx:controller="controller.MainUIController">
     <children>
-        <HBox alignment="CENTER" fillHeight="false" prefHeight="70.0" prefWidth="200.0" style="-fx-padding: 5.0"
+        <HBox alignment="CENTER" fillHeight="false" prefHeight="70.0" prefWidth="200.0"
+              style="-fx-padding: 5.0;-fx-spacing: 5.0"
               VBox.vgrow="SOMETIMES">
             <children>
                 <Button mnemonicParsing="false" onAction="#codeFormatFunction" text="code format"/>
+                <Button mnemonicParsing="false" onAction="#codeConverterFunction" text="code converter"/>
             </children>
         </HBox>
         <StackPane fx:id="containerPane" alignment="TOP_LEFT" prefHeight="148.0" prefWidth="561.0"

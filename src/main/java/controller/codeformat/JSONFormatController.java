@@ -1,4 +1,4 @@
-package controller.CodeFormat;
+package controller.codeformat;
 
 import com.alibaba.fastjson.JSON;
 import javafx.fxml.FXML;
@@ -6,7 +6,7 @@ import javafx.scene.control.TextArea;
 import util.FXHelper;
 
 public class JSONFormatController {
-    public static final String fxmlFile = "/fxml/CodeFormat/JSONFormat.fxml";
+    public static final String fxmlFile = "/fxml/codeformat/JSONFormat.fxml";
 
     @FXML
     private TextArea txtOriginJSON, txtFormatedJSON;

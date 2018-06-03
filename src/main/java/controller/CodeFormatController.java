@@ -1,9 +1,9 @@
 package controller;
 
-import controller.CodeFormat.HTMLFormatController;
-import controller.CodeFormat.JSONFormatController;
-import controller.CodeFormat.SQLFormatController;
-import controller.CodeFormat.XMLFormatController;
+import controller.codeformat.HTMLFormatController;
+import controller.codeformat.JSONFormatController;
+import controller.codeformat.SQLFormatController;
+import controller.codeformat.XMLFormatController;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ScrollPane;

@@ -1,4 +1,4 @@
-package controller.CodeFormat;
+package controller.codeformat;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
@@ -6,7 +6,7 @@ import util.FXHelper;
 import util.SQLUtil;
 
 public class SQLFormatController {
-    public static final String fxmlFile = "/fxml/CodeFormat/SQLFormat.fxml";
+    public static final String fxmlFile = "/fxml/codeformat/SQLFormat.fxml";
 
     @FXML
     private TextArea txtOrigin, txtPretty;

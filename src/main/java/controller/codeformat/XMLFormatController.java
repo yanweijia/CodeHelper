@@ -1,4 +1,4 @@
-package controller.CodeFormat;
+package controller.codeformat;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
@@ -6,7 +6,7 @@ import util.FXHelper;
 import util.XMLUtil;
 
 public class XMLFormatController {
-    public static final String fxmlFile = "/fxml/CodeFormat/XMLFormat.fxml";
+    public static final String fxmlFile = "/fxml/codeformat/XMLFormat.fxml";
 
     @FXML
     private TextArea txtOriginXML, txtPrettyXML;

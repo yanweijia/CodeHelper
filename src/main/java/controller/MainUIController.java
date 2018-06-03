@@ -30,6 +30,12 @@ public class MainUIController implements Initializable {
         FXHelper.loadWindow(getClass(), CodeFormatController.fxmlFile, containerPane);
     }
 
+    @FXML
+    private void codeConverterFunction() {
+        FXHelper.loadWindow(getClass(), CodeConverterController.fxmlFile, containerPane);
+
+    }
+
 
     private void onClose() {
         FXHelper.showInfoDialog("test");

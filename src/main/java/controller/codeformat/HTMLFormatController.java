@@ -1,11 +1,11 @@
-package controller.CodeFormat;
+package controller.codeformat;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
 import util.HtmlUtil;
 
 public class HTMLFormatController {
-    public static final String fxmlFile = "/fxml/CodeFormat/HTMLFormat.fxml";
+    public static final String fxmlFile = "/fxml/codeformat/HTMLFormat.fxml";
 
     @FXML
     private TextArea txtOriginHtml, txtFormatedHtml;
