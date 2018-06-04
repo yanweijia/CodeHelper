@@ -1,9 +1,11 @@
 package controller;
 
+import controller.codeconverter.Base64ConverterController;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.Pane;
+import util.FXHelper;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -19,7 +21,7 @@ public class CodeConverterController implements Initializable {
 
     @FXML
     private void Base64ConverterFunction() {
-//        FXHelper.loadWindow(getClass(), Base64ConverterController.fxmlFile, container);
+        FXHelper.loadWindow(getClass(), Base64ConverterController.fxmlFile, container);
     }
 
 

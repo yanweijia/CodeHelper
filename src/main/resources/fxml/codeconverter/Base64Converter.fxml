@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane layoutX="10.0" layoutY="10.0" prefHeight="387.0" prefWidth="639.0" xmlns="http://javafx.com/javafx/8.0.121"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.codeconverter.Base64ConverterController">
+    <center>
+        <SplitPane dividerPositions="0.5" BorderPane.alignment="CENTER">
+            <items>
+                <BorderPane prefHeight="200.0" prefWidth="200.0">
+                    <top>
+                        <Label text="text to encode" BorderPane.alignment="CENTER"/>
+                    </top>
+                    <center>
+                        <TextArea fx:id="txtOrigin" prefHeight="200.0" prefWidth="200.0"
+                                  BorderPane.alignment="CENTER"/>
+                    </center>
+                </BorderPane>
+                <BorderPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
+                    <top>
+                        <Label text="text to decode" BorderPane.alignment="CENTER"/>
+                    </top>
+                    <center>
+                        <TextArea fx:id="txtEncoded" prefHeight="200.0" prefWidth="200.0"
+                                  BorderPane.alignment="CENTER"/>
+                    </center>
+                </BorderPane>
+            </items>
+        </SplitPane>
+    </center>
+    <bottom>
+        <GridPane alignment="CENTER" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" halignment="CENTER"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" halignment="CENTER"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" valignment="CENTER"/>
+            </rowConstraints>
+            <children>
+                <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#encodeBase64"
+                        text="Encode" textAlignment="CENTER" GridPane.columnIndex="0"/>
+                <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#decodeBase64"
+                        text="Decode" textAlignment="CENTER" GridPane.columnIndex="1"/>
+            </children>
+        </GridPane>
+    </bottom>
+</BorderPane>
