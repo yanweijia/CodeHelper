@@ -43,6 +43,8 @@ public class FXHelper {
         containerPane.getChildren().forEach(node -> node.setVisible(false));
         if (map.get(fxmlFile) != null) {
             ((Node) map.get(fxmlFile)).setVisible(true);
+            //防止切到别的面板后调整窗口大小再切回来时面板内容与窗口大小不契合
+            ((Node) map.get(fxmlFile)).autosize();
         } else {
             map.put(fxmlFile, pane);
             containerPane.getChildren().addAll(pane);
