@@ -104,7 +104,7 @@ public class Base64ConverterController implements Initializable {
     }
 
     /**
-     * 将
+     * 将目标信息写入到文本框或文件
      *
      * @return
      */
