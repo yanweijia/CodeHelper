@@ -111,6 +111,7 @@ public class Base64ConverterController implements Initializable {
     private boolean writeToTarget(ChoiceBox<Source> cbTo, TextArea txtField, byte[] bytes) {
         if (cbTo.getValue().equals(Source.textField)) {
             txtField.setText(new String(bytes, StandardCharsets.UTF_8));
+            return true;
         } else {
             try {
                 //选择保存的 targetFile
