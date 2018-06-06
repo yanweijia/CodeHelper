@@ -46,12 +46,13 @@
     </dependencies>
 
     <build>
+        <finalName>${project.artifactId}-${project.version}</finalName>
         <resources>
             <resource>
-                <filtering>false</filtering>
-                <directory>src/main/java</directory>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
                 <includes>
-                    <include>**/*.controller</include>
+                    <include>**/*.*</include>
                 </includes>
             </resource>
         </resources>
@@ -64,6 +65,26 @@
                     <source>${java.version}</source>
                     <target>${java.version}</target>
                     <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <!-- 往Manifest.MF文件中添加ClassPath -->
+                            <addClasspath>true</addClasspath>
+                            <!-- classpath前缀 -->
+                            <classpathPrefix>lib/</classpathPrefix>
+                            <!-- 主程序入口 -->
+                            <mainClass>CodeHelperApplication</mainClass>
+                        </manifest>
+                        <manifestEntries>
+                            <Manifest-Version>${project.version}-SNAPSHOT</Manifest-Version>
+                            <Archiver-Version>${project.version}-Release</Archiver-Version>
+                        </manifestEntries>
+                    </archive>
                 </configuration>
             </plugin>
         </plugins>
