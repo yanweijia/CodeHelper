@@ -12,8 +12,7 @@
                         <Label text="text to encode" BorderPane.alignment="CENTER"/>
                     </top>
                     <center>
-                        <TextArea fx:id="txtOrigin" prefHeight="200.0" prefWidth="200.0"
-                                  BorderPane.alignment="CENTER"/>
+                        <TextArea fx:id="txtOrigin" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER"/>
                     </center>
                 </BorderPane>
                 <BorderPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
@@ -31,17 +30,30 @@
     <bottom>
         <GridPane alignment="CENTER" BorderPane.alignment="CENTER">
             <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" halignment="CENTER"/>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" halignment="CENTER"/>
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0"/>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0"/>
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0"/>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0"/>
             </columnConstraints>
             <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" valignment="CENTER"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES"/>
             </rowConstraints>
             <children>
+                <Label text="encode from:"/>
+                <Label text="encode to:" GridPane.rowIndex="1"/>
+                <Label text="decode from:" GridPane.columnIndex="2"/>
+                <Label text="decode to:" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+                <ChoiceBox fx:id="cbEncodeFrom" prefWidth="150.0" GridPane.columnIndex="1"/>
+                <ChoiceBox fx:id="cbEncodeTo" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                <ChoiceBox fx:id="cbDecodeFrom" prefWidth="150.0" GridPane.columnIndex="3"/>
+                <ChoiceBox fx:id="cbDecodeTo" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+
                 <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#encodeBase64"
-                        text="Encode" textAlignment="CENTER" GridPane.columnIndex="0"/>
+                        text="Encode" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
                 <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#decodeBase64"
-                        text="Decode" textAlignment="CENTER" GridPane.columnIndex="1"/>
+                        text="Decode" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="2"/>
             </children>
         </GridPane>
     </bottom>
