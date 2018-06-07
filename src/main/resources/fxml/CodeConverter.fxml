@@ -15,7 +15,7 @@
                 <VBox alignment="TOP_CENTER" prefHeight="240.0" prefWidth="66.0" spacing="10.0">
                     <children>
                         <Button mnemonicParsing="false" onAction="#Base64ConverterFunction" text="Base64"/>
-
+                        <Button mnemonicParsing="false" onAction="#HashConverterFunction" text="Hash"/>
                     </children>
                 </VBox>
             </content>
