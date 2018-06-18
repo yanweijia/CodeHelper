@@ -13,7 +13,7 @@ public class HtmlUtil {
      * @return 支持自关闭标签的 xhtml 风格字串
      * @throws Exception
      */
-    public static String formatHtml(String html){
+    public static String formatHtml4(String html) {
         Document doc = Jsoup.parse(html);
         //设置解析 html 支持 self-closing 的标签,不加如下设置输出的部分标签如<link>没有关闭标签
         //参考 https://github.com/jhy/jsoup/issues/511
