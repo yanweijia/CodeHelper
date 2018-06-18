@@ -18,8 +18,6 @@ import java.util.ResourceBundle;
 public class Base64ConverterController implements Initializable {
     public static final String fxmlFile = "/fxml/codeconverter/Base64Converter.fxml";
 
-    private File originFile = null, targetFile = null;
-
 
     @FXML
     private TextArea txtOrigin, txtEncoded;
@@ -28,7 +26,7 @@ public class Base64ConverterController implements Initializable {
     private ChoiceBox<Source> cbEncodeFrom, cbEncodeTo, cbDecodeFrom, cbDecodeTo;
 
     //文件选择器
-    final FileChooser fileChooser = new FileChooser();
+    private final FileChooser fileChooser = new FileChooser();
 
     @FXML
     private void encodeBase64() throws IOException {

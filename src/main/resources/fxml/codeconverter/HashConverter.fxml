@@ -7,29 +7,26 @@
     <center>
         <GridPane alignment="CENTER" BorderPane.alignment="CENTER">
             <columnConstraints>
-                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES"/>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" prefWidth="133.0" minWidth="100"
+                                   maxWidth="150"/>
                 <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES"/>
             </columnConstraints>
             <rowConstraints>
                 <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES"/>
                 <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES"/>
                 <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES"/>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES"/>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES"/>
             </rowConstraints>
             <children>
                 <Button mnemonicParsing="false" onAction="#compute" text="confirm" GridPane.columnIndex="1"
-                        GridPane.rowIndex="4"/>
-                <Label text="SHA-1:" GridPane.rowIndex="3"/>
-                <Label text="MD5:" GridPane.rowIndex="2"/>
-                <TextField fx:id="txtMD5" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
-                <TextField fx:id="txtSHA1" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
-                <ChoiceBox fx:id="cbSource" prefWidth="150.0" GridPane.rowIndex="4"/>
-                <Button fx:id="btnChooseFile" mnemonicParsing="false" text="choose file" GridPane.columnIndex="1"
-                        GridPane.rowIndex="1"/>
-                <Label text="origin file:" GridPane.rowIndex="1"/>
+                        GridPane.rowIndex="2"/>
+                <Label text="hash:" GridPane.rowIndex="1"/>
+                <TextArea fx:id="txtHash" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+                <ChoiceBox fx:id="cbSource" GridPane.rowIndex="2"/>
+
+
                 <Label text="origin text:"/>
-                <TextArea fx:id="txtOrigin" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1"/>
+                <TextArea fx:id="txtOrigin" GridPane.columnIndex="1"/>
             </children>
 
         </GridPane>
