@@ -4,10 +4,13 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TextArea?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.web.WebView?>
-<BorderPane layoutX="10.0" layoutY="10.0" prefHeight="387.0" prefWidth="639.0" xmlns="http://javafx.com/javafx/8.0.121"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.codeconverter.Base64ImageConverterController">
+
+<BorderPane layoutX="10.0" layoutY="10.0" prefHeight="387.0" prefWidth="639.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.codeconverter.Base64ImageConverterController">
     <bottom>
 
     </bottom>
@@ -16,26 +19,47 @@
             <items>
                 <BorderPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                     <center>
-                        <TextArea fx:id="txtBase64" prefHeight="200.0" prefWidth="200.0" promptText="base64 text"
-                                  wrapText="true" BorderPane.alignment="CENTER">
+                        <TextArea fx:id="txtBase64" prefHeight="200.0" prefWidth="200.0" promptText="base64 text. example:  /9j/iv....." wrapText="true" BorderPane.alignment="CENTER">
                             <opaqueInsets>
-                                <Insets/>
+                                <Insets />
                             </opaqueInsets>
                         </TextArea>
                     </center>
-                    <bottom>
-                        <Button fx:id="btnBase64ToImage" mnemonicParsing="false" onAction="#base64ToImage"
-                                text="base64 to image" BorderPane.alignment="CENTER"/>
-                    </bottom>
+               <bottom>
+                  <GridPane BorderPane.alignment="CENTER">
+                    <columnConstraints>
+                      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                              <Button fx:id="btnBase64ToImage" mnemonicParsing="false" onAction="#base64ToImage" text="base64 to image" />
+                        <Button mnemonicParsing="false" onAction="#openImageFile" text="open image file" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+               </bottom>
                 </BorderPane>
                 <BorderPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                     <center>
-                        <WebView fx:id="webView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER"/>
+                        <WebView fx:id="webView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
                     </center>
-                    <bottom>
-                        <Button fx:id="btnImageToBase64" mnemonicParsing="false" onAction="#imageToBase64"
-                                text="image to base64" BorderPane.alignment="CENTER"/>
-                    </bottom>
+               <bottom>
+                  <GridPane BorderPane.alignment="CENTER">
+                    <columnConstraints>
+                      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                              <Button fx:id="btnImageToBase64" mnemonicParsing="false" onAction="#imageToBase64" text="image to base64" />
+                        <Button mnemonicParsing="false" onAction="#saveImageToFile" text="save image to file" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+               </bottom>
                 </BorderPane>
             </items>
         </SplitPane>
