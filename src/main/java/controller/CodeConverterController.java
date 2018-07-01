@@ -1,6 +1,7 @@
 package controller;
 
 import controller.codeconverter.Base64ConverterController;
+import controller.codeconverter.Base64ImageConverterController;
 import controller.codeconverter.HashConverterController;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -28,6 +29,11 @@ public class CodeConverterController implements Initializable {
     @FXML
     private void HashConverterFunction() {
         FXHelper.loadWindow(getClass(), HashConverterController.fxmlFile, container);
+    }
+
+    @FXML
+    private void Base64ImageConverterFunction() {
+        FXHelper.loadWindow(getClass(), Base64ImageConverterController.fxmlFile, container);
     }
 
 
