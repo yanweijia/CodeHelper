@@ -121,7 +121,7 @@ public class Base64ConverterController implements Initializable {
                 FileUtils.writeByteArrayToFile(targetFile, bytes);
                 return true;
             } catch (IOException e) {
-                e.printStackTrace();
+                FXHelper.showErrorDialog("write to target error." + e.getMessage());
             }
         }
         return false;
