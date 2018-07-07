@@ -21,13 +21,13 @@ public class SystemInfoUtil {
         File[] roots = File.listRoots();
         // 获取磁盘分区列表
         for (File file: roots) {
-            buffer.append(file.getPath()).append(" Info:").append('\n');
+            buffer.append("Disk: \"").append(file.getPath()).append("\" Info:").append('\n');
             // 空闲空间
-            buffer.append("freeMem = ").append(file.getFreeSpace() / 1024 / 1024 / 1024).append("G").append('\n');
+            buffer.append('\t').append("freeMem = ").append(file.getFreeSpace() / 1024 / 1024 / 1024).append("G").append('\n');
             // 可用空间
-            buffer.append("usedMem = ").append(file.getUsableSpace() / 1024 / 1024 / 1024).append("G").append('\n');
+            buffer.append('\t').append("usedMem = ").append(file.getUsableSpace() / 1024 / 1024 / 1024).append("G").append('\n');
             // 总空间
-            buffer.append("TotalMem = ").append(file.getTotalSpace() / 1024 / 1024 / 1024).append("G").append('\n');
+            buffer.append('\t').append("TotalMem = ").append(file.getTotalSpace() / 1024 / 1024 / 1024).append("G").append('\n');
         }
         return buffer.toString();
     }

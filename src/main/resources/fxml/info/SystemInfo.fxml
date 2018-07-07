@@ -10,7 +10,7 @@
             <columns>
                 <TableColumn fx:id="colKey" maxWidth="1.7976931348623157E308" minWidth="50.0" prefWidth="-1.0"
                              text="key"/>
-                <TableColumn fx:id="colValue" maxWidth="1.7976931348623157E308" minWidth="50.0" prefWidth="-1.0"
+                <TableColumn fx:id="colValue" maxWidth="1.7976931348623157E308" minWidth="100.0" prefWidth="-1.0"
                              text="value"/>
             </columns>
         </TableView>

@@ -35,6 +35,18 @@ public class SystemInfoController implements Initializable {
         list.add(new SystemInfoVO("OS name", SystemInfoUtil.getOSName()));
         list.add(new SystemInfoVO("os version", SystemInfoUtil.getOSVersion()));
         list.add(new SystemInfoVO("OS architecture", SystemInfoUtil.getOSArch()));
+        list.add(new SystemInfoVO("OS dataModel",SystemInfoUtil.getDataModel()));
+        list.add(new SystemInfoVO("file encoding",SystemInfoUtil.getFileEncoding()));
+        list.add(new SystemInfoVO("Jnu encoding",SystemInfoUtil.getJnuEncoding()));
+        list.add(new SystemInfoVO("Java Class Version",SystemInfoUtil.getJavaClassVersion()));
+        list.add(new SystemInfoVO("Java home",SystemInfoUtil.getJavaHome()));
+        list.add(new SystemInfoVO("user country",SystemInfoUtil.getUserCountry()));
+        list.add(new SystemInfoVO("user home",SystemInfoUtil.getUserHome()));
+        list.add(new SystemInfoVO("user name",SystemInfoUtil.getUserName()));
+        list.add(new SystemInfoVO("user language",SystemInfoUtil.getUserLanguage()));
+        list.add(new SystemInfoVO("user timezone",SystemInfoUtil.getUserTimezone()));
+        list.add(new SystemInfoVO("Work Directory",SystemInfoUtil.getWorkDir()));
+        list.add(new SystemInfoVO("Disk Info",SystemInfoUtil.getDiskInfo()));
         return list;
     }
 
