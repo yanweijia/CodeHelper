@@ -2,6 +2,10 @@ package util;
 
 import java.io.File;
 
+
+/**
+ * System information util
+ */
 public class SystemInfoUtil {
     private SystemInfoUtil() {
     }
