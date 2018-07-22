@@ -3,6 +3,7 @@ package controller;
 import controller.codeconverter.Base64ConverterController;
 import controller.codeconverter.Base64ImageConverterController;
 import controller.codeconverter.HashConverterController;
+import controller.codeconverter.Html2PdfConverterController;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ScrollPane;
@@ -34,6 +35,11 @@ public class CodeConverterController implements Initializable {
     @FXML
     private void Base64ImageConverterFunction() {
         FXHelper.loadWindow(getClass(), Base64ImageConverterController.fxmlFile, container);
+    }
+
+    @FXML
+    private void Html2PdfConverterFunction() {
+        FXHelper.loadWindow(getClass(), Html2PdfConverterController.fxmlFile, container);
     }
 
 

@@ -16,6 +16,10 @@ public class CodeHelperApplication extends Application {
         FXHelper.newStage(getClass(), MainUIController.fxmlFile, MainUIController.title);
     }
 
+    /**
+     * JavaFX 需要 JDK1.8_60 版本以后的才可以
+     * @param args
+     */
     public static void main(String[] args) {
         String version = System.getProperty("java.version");
         if (Integer.parseInt(version.substring(2, 3)) >= 8 && Integer.parseInt(version.substring(6)) >= 60) {

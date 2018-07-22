@@ -15,6 +15,7 @@
                         <Button mnemonicParsing="false" onAction="#Base64ConverterFunction" text="Base64"/>
                         <Button mnemonicParsing="false" onAction="#HashConverterFunction" text="Hash"/>
                         <Button mnemonicParsing="false" onAction="#Base64ImageConverterFunction" text="Base64Image"/>
+                        <Button mnemonicParsing="false" onAction="#Html2PdfConverterFunction" text="Html2Pdf"/>
                     </children>
                 </VBox>
             </content>
