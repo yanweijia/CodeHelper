@@ -5,8 +5,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextArea;
 import javafx.stage.FileChooser;
-import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.lang3.StringUtils;
+import util.FXHelper;
 import util.ITextUtil;
 
 import java.io.File;
@@ -29,10 +30,33 @@ public class Html2PdfConverterController implements Initializable {
     @FXML
     private void convert() {
         //将textArea中的html文档转换成pdf文件
+        String htmlContent;
         if(Source.textField.equals(cbSource.getValue())){
-
+            htmlContent = txtHtmlContent.getText();
         }else{
-
+            File htmlFile = fileChooser.showOpenDialog(null);
+            if (htmlFile == null) {
+                FXHelper.showWarningDialog("Please choose a File!");
+                return;
+            } else {
+                try {
+                    htmlContent = FileUtils.readFileToString(htmlFile, "UTF-8");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                    htmlContent = null;
+                }
+            }
+        }
+        if (StringUtils.isEmpty(htmlContent)) {
+            FXHelper.showWarningDialog("convert to pdf error, html content is empty or cannot open html file!");
+            return;
+        }
+        File pdfFile = fileChooser.showSaveDialog(null);
+        if (pdfFile != null) {
+            ITextUtil.exportPdf(htmlContent, pdfFile);
+            FXHelper.showInfoDialog("convert to pdf complete!");
+        } else {
+            FXHelper.showWarningDialog("please choose a location to save pdf file.");
         }
 
     }
