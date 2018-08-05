@@ -11,6 +11,7 @@
                 <Button mnemonicParsing="false" onAction="#codeFormatFunction" text="code format"/>
                 <Button mnemonicParsing="false" onAction="#codeConverterFunction" text="code converter"/>
                 <Button mnemonicParsing="false" onAction="#infoFunction" text="Info"/>
+                <Button mnemonicParsing="false" onAction="#toolsFunction" text="Tools"/>
             </children>
         </HBox>
         <StackPane fx:id="containerPane" alignment="TOP_LEFT" prefHeight="148.0" prefWidth="561.0" VBox.vgrow="ALWAYS"/>

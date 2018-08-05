@@ -40,6 +40,10 @@ public class MainUIController implements Initializable {
         FXHelper.loadWindow(getClass(), InfoController.fxmlFile, containerPane);
     }
 
+    @FXML
+    private void toolsFunction() {
+        FXHelper.loadWindow(getClass(), ToolsController.fxmlFile, containerPane);
+    }
 
     private void onClose() {
         FXHelper.showInfoDialog("test");

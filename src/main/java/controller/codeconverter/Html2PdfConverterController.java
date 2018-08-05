@@ -53,8 +53,11 @@ public class Html2PdfConverterController implements Initializable {
         }
         File pdfFile = fileChooser.showSaveDialog(null);
         if (pdfFile != null) {
-            ITextUtil.exportPdf(htmlContent, pdfFile);
-            FXHelper.showInfoDialog("convert to pdf complete!");
+            if (ITextUtil.exportPdf(htmlContent, pdfFile)) {
+                FXHelper.showInfoDialog("convert to pdf complete!");
+            } else {
+                FXHelper.showErrorDialog("convert to pdf Error!");
+            }
         } else {
             FXHelper.showWarningDialog("please choose a location to save pdf file.");
         }
