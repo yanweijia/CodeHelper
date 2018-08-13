@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.DatePicker?>
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <BorderPane layoutX="10.0" layoutY="10.0" prefHeight="387.0" prefWidth="639.0" xmlns="http://javafx.com/javafx/8.0.121"
             xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.tools.DateTimeToolsController">
@@ -15,13 +14,24 @@
                                    prefWidth="133.0"/>
                 <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES"/>
                 <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
             </columnConstraints>
             <rowConstraints>
                 <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES"/>
             </rowConstraints>
             <children>
-                <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="select date:"/>
-                <DatePicker fx:id="datePicker" onAction="#changeDate" GridPane.columnIndex="1"/>
+                <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="dateTime:" GridPane.columnIndex="0"/>
+                <TextField fx:id="dateTime" GridPane.columnIndex="1"/>
+                <Button mnemonicParsing="false" onAction="#changeDate" text="confirm ↓" GridPane.columnIndex="2"/>
+                <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="timeStamp:" GridPane.rowIndex="1"/>
+                <TextField fx:id="timeStamp" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                <Button mnemonicParsing="false" onAction="#changeTimestamp" text="confirm ↑" GridPane.columnIndex="2"
+                        GridPane.rowIndex="1"/>
+                <Button mnemonicParsing="false" onAction="#refreshDateTime" text="refresh" GridPane.columnIndex="3"
+                        GridPane.rowIndex="0"/>
+                <Button mnemonicParsing="false" onAction="#refreshTimestamp" text="refresh" GridPane.columnIndex="3"
+                        GridPane.rowIndex="1"/>
             </children>
 
         </GridPane>

@@ -14,7 +14,7 @@
             <content>
                 <VBox alignment="TOP_CENTER" prefHeight="240.0" prefWidth="66.0" spacing="10.0">
                     <children>
-                        <Button mnemonicParsing="false" onAction="#dateTimeFunction" text="SystemInfo"/>
+                        <Button mnemonicParsing="false" onAction="#dateTimeFunction" text="TimeStamp"/>
                     </children>
                 </VBox>
             </content>
