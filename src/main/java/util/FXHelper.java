@@ -4,7 +4,6 @@ import com.sun.javafx.robot.impl.FXRobotHelper;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.layout.Pane;
@@ -61,12 +60,13 @@ public class FXHelper {
      * @param windowTitle 窗口名称
      * @throws IOException
      */
-    public static void newStage(Class className, String fxmlFile, String windowTitle) throws IOException {
-        Scene scene = new Scene((Parent) FXMLLoader.load(className.getResource(fxmlFile)));
+    public static Stage newStage(Class className, String fxmlFile, String windowTitle) throws IOException {
+        Scene scene = new Scene(FXMLLoader.load(className.getResource(fxmlFile)));
         Stage stage = new Stage();
         stage.setScene(scene);
         stage.setTitle(windowTitle);
         stage.show();
+        return stage;
     }
 
 

@@ -2,6 +2,7 @@ package controller.tools;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 import org.apache.commons.lang3.math.NumberUtils;
 import util.DateUtil;
@@ -16,6 +17,9 @@ public class DateTimeToolsController implements Initializable {
     public static final String fxmlFile = "/fxml/tools/DateTimeTools.fxml";
 
     private static final String DATE_FORMAT_PARTTEN = DateUtil.FORMAT_YYYY_MM_DD_HH_MI_SS_SSS;
+
+    @FXML
+    private CheckBox refreshDateTime, refreshTimestamp;
 
     @FXML
     private TextField dateTime, timeStamp;
@@ -40,12 +44,10 @@ public class DateTimeToolsController implements Initializable {
         dateTime.setText(DateUtil.getSpecifyDate(date, DATE_FORMAT_PARTTEN));
     }
 
-    @FXML
     private void refreshDateTime() {
         dateTime.setText(DateUtil.getSpecifyDate(new Date(), DATE_FORMAT_PARTTEN));
     }
 
-    @FXML
     private void refreshTimestamp() {
         timeStamp.setText(String.valueOf(System.currentTimeMillis()));
     }
@@ -55,6 +57,22 @@ public class DateTimeToolsController implements Initializable {
         dateTime.setPromptText(DATE_FORMAT_PARTTEN);
         dateTime.setText(DateUtil.getSpecifyDate(new Date(), DATE_FORMAT_PARTTEN));
         timeStamp.setPromptText("timestamp(ms)");
+        //自动刷新时间的线程
+        new Thread(() -> {
+            while (true) {
+                if (refreshDateTime.isSelected()) {
+                    refreshDateTime();
+                }
+                if (refreshTimestamp.isSelected()) {
+                    refreshTimestamp();
+                }
+                try {
+                    Thread.sleep(1000L);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
     }
 
 }

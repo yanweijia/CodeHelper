@@ -28,10 +28,10 @@
                 <TextField fx:id="timeStamp" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
                 <Button mnemonicParsing="false" onAction="#changeTimestamp" text="confirm ↑" GridPane.columnIndex="2"
                         GridPane.rowIndex="1"/>
-                <Button mnemonicParsing="false" onAction="#refreshDateTime" text="refresh" GridPane.columnIndex="3"
-                        GridPane.rowIndex="0"/>
-                <Button mnemonicParsing="false" onAction="#refreshTimestamp" text="refresh" GridPane.columnIndex="3"
-                        GridPane.rowIndex="1"/>
+                <CheckBox fx:id="refreshDateTime" mnemonicParsing="false" text="autoRefresh" GridPane.columnIndex="3"
+                          GridPane.rowIndex="0"/>
+                <CheckBox fx:id="refreshTimestamp" mnemonicParsing="false" text="autoRefresh" GridPane.columnIndex="3"
+                          GridPane.rowIndex="1"/>
             </children>
 
         </GridPane>
