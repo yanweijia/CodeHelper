@@ -69,10 +69,10 @@ public class CodeHelperApplication extends Application {
     private void readWindowInfo(Stage stage) {
         //读取到的内容有误就使用默认信息
         try {
-            Double x = Double.parseDouble(ConfigUtil.getProperty(ConfigUtil.CFG_WINDOW_X, null));
-            Double y = Double.parseDouble(ConfigUtil.getProperty(ConfigUtil.CFG_WINDOW_Y, null));
-            Double width = Double.parseDouble(ConfigUtil.getProperty(ConfigUtil.CFG_WINDOW_WIDTH, null));
-            Double height = Double.parseDouble(ConfigUtil.getProperty(ConfigUtil.CFG_WINDOW_HEIGHT, null));
+            double x = Double.parseDouble(ConfigUtil.getProperty(ConfigUtil.CFG_WINDOW_X, null));
+            double y = Double.parseDouble(ConfigUtil.getProperty(ConfigUtil.CFG_WINDOW_Y, null));
+            double width = Double.parseDouble(ConfigUtil.getProperty(ConfigUtil.CFG_WINDOW_WIDTH, null));
+            double height = Double.parseDouble(ConfigUtil.getProperty(ConfigUtil.CFG_WINDOW_HEIGHT, null));
             if (x != 0.0D && y != 0.0D && width != 0.0D && height != 0.0D) {
                 stage.setX(x);
                 stage.setY(y);

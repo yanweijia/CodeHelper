@@ -19,6 +19,7 @@ public class ConfigUtil {
     public static final String CFG_WINDOW_Y = "window_y";
     public static final String CFG_WINDOW_WIDTH = "window_width";
     public static final String CFG_WINDOW_HEIGHT = "window_height";
+    public static final String CFG_LANGUAGE_EN = "en";
 
     //初始化必须运行,否则会报空指针异常
     static {
@@ -49,7 +50,7 @@ public class ConfigUtil {
 
     //获取使用的语言,如果没有,默认中文
     public static int getLanguage() {
-        String strLanguage = pro.getProperty("language", "en");
+        String strLanguage = pro.getProperty("language", CFG_LANGUAGE_EN);
         return Integer.parseInt(strLanguage);
     }
 
