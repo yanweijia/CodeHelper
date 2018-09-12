@@ -31,16 +31,18 @@
     <bottom>
         <GridPane alignment="CENTER" BorderPane.alignment="CENTER">
             <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" halignment="CENTER"/>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" halignment="CENTER"/>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" halignment="CENTER"/>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0"/>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0"/>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0"/>
             </columnConstraints>
             <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" valignment="CENTER"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES"/>
             </rowConstraints>
             <children>
                 <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#formatHTML"
                         text="Format" textAlignment="CENTER" GridPane.columnIndex="2"/>
+                <ChoiceBox fx:id="cbType" prefWidth="150.0" GridPane.columnIndex="1"/>
+                <Label text="Type:" textAlignment="RIGHT"/>
             </children>
         </GridPane>
     </bottom>

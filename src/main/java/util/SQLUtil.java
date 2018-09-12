@@ -7,6 +7,7 @@ import java.util.StringTokenizer;
 
 
 /**
+ * sql format util
  * ref: http://www.mamicode.com/info-detail-1429225.html
  *
  * @Create on 2018/06/03

@@ -23,22 +23,22 @@ public class CodeFormatController implements Initializable {
     private ScrollPane scrollPane;
 
     @FXML
-    private void HTMLFormatFunction() {
+    private void htmlFormatFunction() {
         FXHelper.loadWindow(getClass(), HTMLFormatController.fxmlFile, container);
     }
 
     @FXML
-    private void JSONFormatFunction() {
+    private void jsonFormatFunction() {
         FXHelper.loadWindow(getClass(), JSONFormatController.fxmlFile, container);
     }
 
     @FXML
-    private void XMLFormatFunction() {
+    private void xmlFormatFunction() {
         FXHelper.loadWindow(getClass(), XMLFormatController.fxmlFile, container);
     }
 
     @FXML
-    private void SQLFormatFunction() {
+    private void sqlFormatFunction() {
         FXHelper.loadWindow(getClass(), SQLFormatController.fxmlFile, container);
 
     }
@@ -46,7 +46,7 @@ public class CodeFormatController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        HTMLFormatFunction();
+        htmlFormatFunction();
         //scrollPane's content auto fit parent size
         scrollPane.setFitToHeight(true);
         scrollPane.setFitToWidth(true);

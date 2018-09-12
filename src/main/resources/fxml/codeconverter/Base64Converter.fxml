@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane layoutX="10.0" layoutY="10.0" prefHeight="387.0" prefWidth="639.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.codeconverter.Base64ConverterController">
+    <center>
+        <SplitPane dividerPositions="0.5" BorderPane.alignment="CENTER">
+            <items>
+                <BorderPane prefHeight="200.0" prefWidth="200.0">
+                    <top>
+                        <Label text="text to encode" BorderPane.alignment="CENTER" />
+                    </top>
+                    <center>
+                        <TextArea fx:id="txtOrigin" prefHeight="200.0" prefWidth="200.0" wrapText="true" BorderPane.alignment="CENTER" />
+                    </center>
+                </BorderPane>
+                <BorderPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
+                    <top>
+                        <Label text="text to decode" BorderPane.alignment="CENTER" />
+                    </top>
+                    <center>
+                        <TextArea fx:id="txtEncoded" prefHeight="200.0" prefWidth="200.0" wrapText="true" BorderPane.alignment="CENTER" />
+                    </center>
+                </BorderPane>
+            </items>
+        </SplitPane>
+    </center>
+    <bottom>
+        <GridPane alignment="CENTER" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label text="encode from:" />
+                <Label text="encode to:" GridPane.rowIndex="1" />
+                <Label text="decode from:" GridPane.columnIndex="2" />
+                <Label text="decode to:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                <ChoiceBox fx:id="cbEncodeFrom" prefWidth="150.0" GridPane.columnIndex="1" />
+                <ChoiceBox fx:id="cbEncodeTo" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <ChoiceBox fx:id="cbDecodeFrom" prefWidth="150.0" GridPane.columnIndex="3" />
+                <ChoiceBox fx:id="cbDecodeTo" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+
+                <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#encodeBase64" text="Encode" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#decodeBase64" text="Decode" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            </children>
+        </GridPane>
+    </bottom>
+</BorderPane>

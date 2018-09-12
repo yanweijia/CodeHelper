@@ -12,7 +12,7 @@ local.properties
 .settings/
 .loadpath
 .recommenders
-
+CodeHelperConfig.ini
 # External tool builders
 .externalToolBuilders/
 
