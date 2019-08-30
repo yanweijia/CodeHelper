@@ -25,19 +25,11 @@ public class PdfUtilTest {
             long costTime = System.currentTimeMillis() - startTime;
             log.info("load costTime:{}ms", costTime);
             startTime = System.currentTimeMillis();
-
             PDFRenderer renderer = new PDFRenderer(doc);
-            for (int i = 0; i < doc.getNumberOfPages(); i++) {
-                int finalI = i;
-                FutureTask<Boolean> task = new FutureTask<Boolean>(() -> {
-                    BufferedImage image = renderer.renderImage(finalI, 1f, ImageType.RGB);
-                    log.info("image loaded ");
-                    ImageIO.write(image, "PNG", new File(String.format("./temp/page/%s.png", finalI)));
-                    log.info("image writed");
-                    return true;
-                });
-
-            }
+            BufferedImage image = renderer.renderImage(1, 1f, ImageType.RGB);
+            log.info("image loaded ");
+            ImageIO.write(image, "PNG", new File(String.format("./temp/page/%s.png", 0)));
+            log.info("image writed");
             doc.close();
             log.info("convert2png costTime:{}ms", System.currentTimeMillis() - startTime);
 
